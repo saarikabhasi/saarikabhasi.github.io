@@ -32,12 +32,15 @@ overflow: hidden;
 div.intro .words{
     padding: 3rem;
     font-size: 5rem;
+    color:#006a91;
 }
 
-div.intro .words strong{
+div.intro .words span{
     font-weight: 900;
 }
-
+span.designation{
+    font-size: 15px;
+}
 nav#nav-wrap{
     font: 1.1rem 'opensans-bold', sans-serif;
     width: 100%;
@@ -431,7 +434,7 @@ div .skills-set-main ul:nth-child(even){
     line-height: 12px;
 }
 ul.skills-set #bar{
-    width: 100%;
+    
     position: absolute;
     top:10px;
     left:80%;
@@ -440,12 +443,12 @@ ul.skills-set #bar{
     border-radius: 0%;
     
 }
-ul.skills-set #bar:hover{
+ul.skills-set .bar-hover{
     animation-name: moveside;
     animation-duration: 1s;
     animation-iteration-count: 1 ;
     animation-timing-function: linear;
-    background-color: palevioletred;
+   
 }
 
 ul.skills-set li{
@@ -745,6 +748,7 @@ div.intro .words{
     font-weight: 800;
     line-height: 1.1;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
 }
 }
 
