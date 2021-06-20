@@ -1,19 +1,20 @@
 const skillsPercentage = {
-    "Python":6,
-    "C/C++" : 6,
-    "Shell":4,
-    "Javascript":1,
-    "HTML/CSS":2,
-    "MySQL":6,
+    "Python":[6,"#A16E83"],
+    "C/C++" : [6,"#479761"],
+    "Shell":[4,"#3AAFA9"],
+    "Javascript":[1,"#88DBBC"],
+    "HTML/CSS":[2, "#E7717D"],
+    "MySQL":[6,"#D79922"],
 
 }
+
 
 async function updateintroName(){
     let heading =document.querySelectorAll('.name')
     let offset = 0.1
     let start = 1.4
     heading.forEach(span=>{
-        console.log(span)
+        // console.log(span)
         span.classList.add("animated","fadeIn")
         span.style.animationDuration = "3s"
    
@@ -25,7 +26,6 @@ async function updateintroName(){
 async function updateintroDesignation(){
     let designation =document.querySelectorAll('.designation')
     
-   
     let startD1 = 4
     let offsetD1 = 1
 
@@ -45,8 +45,8 @@ async function updateintroDesignation(){
 }
 
 async function updatebarSection(){
+
     var ulSkillset= document.querySelector(".skills-set")
-    
     var totalSkills = Object.keys(skillsPercentage).length
 
     for (let l =0;l<totalSkills;l++){
@@ -57,24 +57,46 @@ async function updatebarSection(){
         divskName.innerHTML = Object.keys(skillsPercentage)[l]
 
         let divBar = document.createElement("div")
-        divBar.classList.add("moveSide","h-25","bar-hover")
+        divBar.classList.add("h-25")
         divBar.setAttribute("id","bar")
-        divBar.setAttribute("width",skillsPercentage[Object.keys(skillsPercentage)[l]]+'rem')   
-        // console.log(skillsPercentage[Object.keys(skillsPercentage)[l]]*100)
-        divBar.style.backgroundColor ="palevioletred"
+        
+        
+        let skWidth = skillsPercentage[Object.keys(skillsPercentage)[l]][0]*10 +"%"
+        divBar.style.width= skWidth
+        divBar.style.backgroundColor =skillsPercentage[Object.keys(skillsPercentage)[l]][1]
 
 
         let expSk = document.createElement("div")
         expSk.setAttribute("id","exp")
         expSk.classList.add("rect")
-        expSk.innerHTML = skillsPercentage[Object.keys(skillsPercentage)[l]] + "year(s)"
-        
+
+        let p = document.createElement("p")
+        p.classList.add("lead")
+        p.innerHTML = skillsPercentage[Object.keys(skillsPercentage)[l]][0] + "year(s)"
+
+        expSk.appendChild(p)
+
         liSk.appendChild(divskName)
-        liSk.appendChild(divBar)
+        liSk.appendChild(divBar)    
         liSk.appendChild(expSk)
 
         ulSkillset.appendChild(liSk )
         
+      
+        divBar.animate([
+            {width:0},
+
+            {width:skWidth}
+        ],{
+            duration:2000,
+            easing:'ease-in-out',
+            iterations:1,
+            direction:'alternate',
+
+        }
+
+        );
+       
     }   
 
 
