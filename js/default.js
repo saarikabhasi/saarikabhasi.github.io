@@ -30,10 +30,24 @@ function scroll_down_click(){
     
 }
 
+async function animateskillsBar(){
+    // updatebarSection()
+    let divBar = document.querySelectorAll("#bar")
+    var offset = 1
+    divBar.forEach(div =>{
+        
+        div.classList.add("moveBar")
+        div.style.animationDelay = "0.1s"
+        div.style.animationDuration="4s"
+        offset +=1
+
+    })
+}
+
 function handlescroll(){
     scrollTotal = document.documentElement.clientHeight+document.documentElement.scrollHeight
     scrollPosition= document.documentElement.scrollTop/scrollTotal
-    
+    console.log(scrollPosition)
     if (scrollPosition >= 0.01){
 
         document.querySelector("#nav-wrap").classList.add('opaque')
@@ -56,42 +70,60 @@ function handlescroll(){
 
     }    
     if (scrollPosition >0.06 && scrollPosition <0.27 ){
-       
-        
-       
         // set 'about' section as current
         change_status_of_btn("about")
-        let  abt = document.querySelector("#about").childNodes[1]
-        abt.classList.add("fadeIn","animated")
-        abt.style.animationDelay = "0.25s"
-        abt.style.animationDuration="4s"
+        // let  abt = document.querySelector("#about").childNodes[1]
+        
+       
+        let  abt = document.querySelector("#about-me")
+            abt.classList.add("fadeUp")
+            abt.style.animationDelay = "0.01s"
+            abt.style.animationDuration="0.5s"
+            //animateskillsBar();
 
-        let skHeading = document.querySelector(".heading")
-        skHeading.classList.add("fadeIn","animated")
-        skHeading.style.animationDelay = "1s"
-        skHeading.style.animationDuration="4s"
+       
+
        
 
 
 
     }
-    if (scrollPosition >0.27  && scrollPosition <0.45 ){
+    if (scrollPosition >0.2 && scrollPosition <0.35 ){
+        console.log("skills")
+        let  sk = document.querySelector("#skills")
+            sk.classList.add("fadeUp")
+            sk.style.opacity = 1
+            sk.style.animationDelay = "0.1s"
+            sk.style.animationDuration="0.5s"
+            animateskillsBar();
+
+
+    }
+    if (scrollPosition >0.35  && scrollPosition <0.55 ){
         
         // set 'Portfolio' section as current
         change_status_of_btn("portfolio")
         // window.location.hash = "#portfolio"
         let portf = document.querySelector("#portfolio")
-        portf.classList.add("fadeIn","animated")
-        portf.style.animationDelay = "0.25s"
-        portf.style.animationDuration="4s"
+        portf.classList.add("fadeUp","animated")
+        portf.style.opacity = 1
+        portf.style.animationDelay = "0.5s"
+        portf.style.animationDuration="0.5s"
 
-
-       
+        var eachProject = document.querySelector("#projects").querySelectorAll(".col-lg-4")
+        var offset = 1
+        eachProject.forEach(divs =>{
+         
+            divs.classList.add("fadeUp")
+            divs.style.animationDelay = "0.1s"
+            divs.style.animationDuration="0.5s"
+            offset+=1
+        })
        
         
     }
 
-    if (scrollPosition >0.45){
+    if (scrollPosition >0.55){
         // set 'contact' section as current
 
         change_status_of_btn("resume")
