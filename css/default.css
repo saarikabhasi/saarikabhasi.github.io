@@ -7,12 +7,12 @@ body{
 }
 
 aside{
-    left:100px;
-    margin-left: 85%;
+    left:5%;
+    margin-left: 87%;
     background-color: transparent;
     color:#da5b4a;
     padding: 2px;
-    width:70px;
+    width:auto;
     height: 100%;
     position: fixed;
     z-index: 1;
@@ -20,7 +20,7 @@ aside{
 }
 header#home{
 position: relative;
-height: 800px;
+/* height: 800px; */
 min-height: 500px;
 width: 95%;
 /* background: #F4F4F4 no-repeat top center; */
@@ -102,7 +102,7 @@ div#home,div.scroll-down{
     position: relative;
     left:0%;
     top: 20%;
-    margin: 0 auto;
+    margin: 7% auto 0 ;
     letter-spacing: 2.5px;
     font: 25px 'opensans-bold', sans-serif;
     /* text-align: right; */
@@ -158,8 +158,9 @@ div.scroll-down{
 
 @keyframes fadeUp{
 
-    100% {transform: translateY(0);}
-    0% {transform: translateY(-30px);}
+    100% {transform: translateY(0px);}
+    0% {transform: translateY(-30px); opacity: 0}
+    
 }
 @-webkit-keyframes fadeUp {
     100% {transform: translateY(0);}
@@ -235,6 +236,20 @@ div.scroll-down{
     
 }
 
+@keyframes moveBar{
+
+    /* 100% {width:100%;} */
+    0%{width: 0;}
+    
+} 
+.moveBar{
+   
+    animation-name: moveBar;
+    animation-timing-function: 'ease-in-out';
+    animation-iteration-count: 1;
+    animation-direction: "alternate";
+
+}
 .fadeIn {
     -webkit-animation-name: fadeIn;
     animation-name: fadeIn;
@@ -243,12 +258,15 @@ div.scroll-down{
     -webkit-animation-name: bounce;
     animation-name: bounce;
     animation-timing-function: ease;
-    animation-iteration-count: infinite;
+    animation-iteration-count: 10;
 }
 .fadeUp{
     -webkit-animation-name: fadeUp;
     animation-name: fadeUp;
-    animation-timing-function: ease;
+    animation-timing-function: linear;
+    transform:  matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    
+    transition: opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s, transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
     
     
 }
@@ -257,6 +275,8 @@ div.scroll-down{
     animation-name: moveUp;
     animation-iteration-count: ease;
 
+    transform:  matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    transition: opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s, transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
 }
 .fadeSlow{
     -webkit-animation-name: fadeSlow;
@@ -270,7 +290,7 @@ div.scroll-down{
     white-space: nowrap;
     overflow: hidden;
     width: 25%;
-    margin: 0 auto;
+    margin: 15% auto 0;
     -webkit-animation: type 2s steps(40, end);
     animation: type 1.5s steps(10, end),blink .5s step-end infinite alternate;
     -webkit-animation-fill-mode: forwards;
@@ -312,15 +332,16 @@ div.social{
 .fa-angle-double-down:hover{
     color:#006a91 ;
 }
-.fa:hover{
+/* .fa:hover{
     color:#fdfdff;;
-}
+} */
 div .scroll-down{
     margin-top:400px;
    
 }
 .fa-angle-double-down{
     font-size: 40px;
+
 }
 
 .opaque {
@@ -340,7 +361,7 @@ div .scroll-down{
     overflow: hidden;
     /* text-align:center; */
     padding-top: 2rem;
-    padding-bottom: 15rem;
+    padding-bottom: 1rem;
     padding-left: 2rem;
 
 }
@@ -352,34 +373,45 @@ div .scroll-down{
     letter-spacing: .4rem;
     
 }
+/* #about-me-info{
+    height:auto;
+} */
 #about-me-info h1, #about-me-info p{
     color: #080808;
     text-align: left;
+    opacity: 0.7;
+
     /* justify-content: center; */
 }
+#about-me-info p {
+    /* opacity: 0.9 !important; */
+}
 .about-me-info img{
-    border-radius: 0%;
+    border-radius: 50%;
     object-position: 200% 100%; 
 }
 
 #portfolio,#contact,#skills,#resume{
     
     position: relative;
-    /* height: 800px; */
+    height: 100%;
     min-height: 500px;
     /* width: 100%; */
-    width: 95%;
+    /* width: 95%; */
+    width: auto;
     background-color: transparent;
     overflow: hidden;
-    text-align:center;
+    /* text-align:center; */
     padding-top: 3rem;
-    padding-bottom: 15rem;
+    /* padding-bottom: 15rem; */
 
 }
 #portfolio,#resume{
     width: 94%;
+    text-align:center;
 }
 #skills{
+    opacity: 0;
     /* background-color: rgb(254, 255, 205); */
 }
 ul.skills-set{
@@ -421,6 +453,8 @@ ul.skills-set #bar{
     left:20%;
     height:20%;
     /* width: 100%; */
+ 
+    width:10%;
     border-radius: 0%;
     
 }
@@ -522,7 +556,7 @@ ul.skills-set li #exp p.lead {
 #portfolio{
     /* background:#FFF5EB; */
     opacity: 0;
-
+    /* opacity: 0; */
     background: transparent;
 }
 
@@ -553,6 +587,7 @@ ul.projects-grid{
     justify-content: space-between; 
 }
 #portfolio .col-lg-4{
+
     margin-bottom: 1.5rem;
 }
 
@@ -689,9 +724,12 @@ embed{
  }
  div#home,div.scroll-down{
      left:0%;
+     margin: 40% auto 0 ;
  }
  aside{
-     display: hide;
+    opacity: 0;
+     /* margin-left: auto; */
+     /* display: hide; */
  }
  #about h5{
     font-size: 1.3rem;
@@ -757,7 +795,9 @@ div.intro .words{
         left:0%;
     }
     aside{
-        display: hide;
+        opacity: 0;
+        /* margin-left: 85%; */
+        /* display: hide; */
     }
     div.intro .words{
         padding: 2rem;
@@ -771,9 +811,11 @@ div.intro .words{
     .typing{
         border-right: .1em solid orange;
         width: 60%;
+        margin: 15% auto 0 !important;
     }
     div.scroll-down{
         top: 50%;
+        margin: 40% auto 0;
         /* left: -50%; */
       
     }
@@ -821,15 +863,22 @@ div.intro .words{
         width: 100%;
     } */
     aside{
-        display: hide;
+        opacity: 0;
+        /* margin-left: 75%; */
+        /* display: hide; */
     }
     div#home,div.scroll-down{
         left:0%;
     }
     div.scroll-down{
         top: 65%;
+        margin: 69% auto 0 ;
+        margin-bottom: 2rem;
         /* left: -50%; */
       
+    }
+    .typing{
+        margin: 25% auto 0;
     }
 
 }

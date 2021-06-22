@@ -52,6 +52,8 @@ async function updatebarSection(){
     for (let l =0;l<totalSkills;l++){
         let liSk  = document.createElement("li")
         liSk .classList.add("sk")
+        // liSk.style.animationDelay = "1.2s"
+        // liSk.style.animationDuration="4s"
         
         let divskName = document.createElement("div")
         divskName.innerHTML = Object.keys(skillsPercentage)[l]
@@ -62,6 +64,7 @@ async function updatebarSection(){
         
         
         let skWidth = skillsPercentage[Object.keys(skillsPercentage)[l]][0]*10 +"%"
+        
         divBar.style.width= skWidth
         divBar.style.backgroundColor =skillsPercentage[Object.keys(skillsPercentage)[l]][1]
 
@@ -83,19 +86,19 @@ async function updatebarSection(){
         ulSkillset.appendChild(liSk )
         
       
-        divBar.animate([
-            {width:0},
+        // divBar.animate([
+        //     {width:0},
+        //     {width:skWidth}
+        // ],{
+        //     delay:1000,
+        //     duration:3000,
+        //     easing:'ease-in-out',
+        //     iterations:1,
+        //     direction:'alternate',
 
-            {width:skWidth}
-        ],{
-            duration:2000,
-            easing:'ease-in-out',
-            iterations:1,
-            direction:'alternate',
+        // }
 
-        }
-
-        );
+        // );
        
     }   
 
@@ -115,7 +118,7 @@ async function updatebarSection(){
 document.addEventListener('DOMContentLoaded',function(){
     updateintroName()
     updateintroDesignation()
+ 
     updatebarSection()
-
     
 })

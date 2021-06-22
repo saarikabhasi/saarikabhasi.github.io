@@ -22,7 +22,7 @@
     </head>
     <body data-spy="scroll" data-target="#nav-wrap" style ="width:411 px" data-offset="50">
         <!-- tabs -->
-        <header id="home" style="height: 731 px;" class="text-center">
+        <header id="home"  class="text-center">
             <aside>
                 <!-- Contact -->
                 <section id="contact" >
@@ -100,7 +100,7 @@
                         <!-- <i class="fa fa-angle-double-down animated"></i> -->
                         <!-- <i class="fa fa-thumbs-o-up"></i> -->
                       
-                        <i class="fa fa-angle-double-down  " style="-webkit-animation-duration: 2s;"></i>
+                        <i class="fa fa-angle-double-down bounce " style="-webkit-animation-duration: 2s;"></i>
                     </a>
                 </div>
             
@@ -116,26 +116,32 @@
     
                 
                 <h5 class="text-center p-3 " >Let me introduce myself!</h5>
-                <div class="row">
+                <div class="row mb-5" id="about-me">
                     <div class="col-lg-7" id="about-me-info">
-                        <h1 class="p-3 fadeUp">   Nair Saarika Bhasi</h1>
+                        <h1 class="p-3 fadeUp" >   Nair Saarika Bhasi</h1>
                         <div class="">
 
-                                <p class="lead p-3 fadeUp">
-                                   I am a Computer Science graduate from India, have experience on Back-end and Front-end development. 
-                                   I like creating beautiful website, building algorithms and solving problems!
+                                <p class="lead p-3 animated fadeUp">
+                                   I am a Computer Science graduate, have experience on Back-end and Front-end development. 
+                                   
+                                   <br><br>I like creating beautiful website, building algorithms and solving problems!
+
 
                                 
+
+
+
+
                                 </p>
                         </div>
                     </div>
                     <div class="col-lg-4 about-me-info showContent">
-                        <img src="images/1.jpg" width=200  alt="profile picture" style="object-fit: cover; Opacity:1 ">
+                        <img src="images/1.jpg" width=100% height="100%" alt="profile picture" style="object-fit: cover; Opacity:1 ">
                     </div>
 
 
                 </div>
-                <div id="skills "  style="-webkit-animation-duration: 4s;">
+                <div id="skills"  style="-webkit-animation-duration: 4s;">
                     <h1 class="p-3 heading text-left" >Skills</h1>
                     <div class="skills-set-main">
                         <ul class ="skills-set ml-3 p-3  ">
@@ -166,7 +172,7 @@
         <section id="portfolio"  style="-webkit-animation-duration: 4s;">
             <h5 >Some of my projects</h5>
             <div class="container-fluid" >
-                <div class="row">
+                <div class="row" id="projects">
                     <div class="col-lg-4" >
                         <div class="project-inner" onmouseover="animationUp(this)" onmouseout="animationDown(this)">
                             <header>
