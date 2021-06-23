@@ -47,7 +47,7 @@ async function animateskillsBar(){
 function handlescroll(){
     scrollTotal = document.documentElement.clientHeight+document.documentElement.scrollHeight
     scrollPosition= document.documentElement.scrollTop/scrollTotal
-    console.log(scrollPosition)
+
     if (scrollPosition >= 0.01){
 
         document.querySelector("#nav-wrap").classList.add('opaque')
@@ -142,7 +142,24 @@ function handlescroll(){
     }
 }
 
+function moveasideContact(){
+    console.log(window.innerWidth)
+    var destinationContact = document.querySelector(".main")
+    if (window.innerWidth <1024) {
+        var aside = document.querySelectorAll(".side")
+        aside.forEach(div =>{
+            
+            div.classList.replace("col","row")
+            destinationContact.appendChild(div)
+        })
 
+       
+
+        //destinationContact.innerHTML = aside.innerHTML
+    }
+
+}
+window.addEventListener('resize',moveasideContact)
 
 document.addEventListener("scroll", handlescroll)
 document.addEventListener('DOMContentLoaded',function(){
@@ -165,11 +182,41 @@ document.addEventListener('DOMContentLoaded',function(){
        
     
     });
-    document.querySelectorAll("#bar").forEach(button =>{
-            button.onclick = function(){
-                
-            }
-    })
+    // var cont =document.querySelector("a[href='#contact']").className.split(' ');
+   
+    if (window.innerWidth <= 1024) {
+        moveasideContact()
+    //     //for smaller screen, show contact button
+    //     if (cont.indexOf("d-none")!= -1 && cont.indexOf("d-inline")==-1){
+    //         document.querySelector("a[href='#contact']").classList.remove("d-none")
+    //         document.querySelector("a[href='#contact']").classList.add("d-inline-block")
+    //         // document.querySelector("a[href='#contact']").classList.toggle("d-inline")    
+    //     }
+
+    //     // take contact section
+
+    //     let aside = document.getElementsByTagName("aside")
+        
+    //     console.log(aside)
+        
+
+        
+
+
+    }
+    // else{
+    //     if (cont.indexOf("d-inline-block")==-1){
+    //         // document.querySelector("a[href='#contact']").classList.remove("d-none")
+    //         document.querySelector("a[href='#contact']").classList.add("d-none")
+    //         // document.querySelector("a[href='#contact']").classList.toggle("d-none")    
+    //     }
+        
+
+        
+    // }
+    
+    
+    
 
 
 })  
@@ -187,8 +234,6 @@ function animationDown(element){
     element.style.animationDelay = null
     element.style.animationDuration=null
 }
-
-
 
 
 

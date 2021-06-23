@@ -6,6 +6,7 @@ const skillsPercentage = {
     "HTML/CSS":[2, "#E7717D"],
     "MySQL":[6,"#D79922"],
 
+
 }
 
 
