@@ -31,7 +31,7 @@ function scroll_down_click(){
 }
 
 async function animateskillsBar(){
-    // updatebarSection()
+
     let divBar = document.querySelectorAll("#bar")
     var offset = 1
     divBar.forEach(div =>{
@@ -143,24 +143,28 @@ function handlescroll(){
 }
 
 function moveasideContact(){
-    console.log(window.innerWidth)
-    var destinationContact = document.querySelector(".main")
-    if (window.innerWidth <1024) {
-        var aside = document.querySelectorAll(".side")
-        aside.forEach(div =>{
-            
-            div.classList.replace("col","row")
-            destinationContact.appendChild(div)
-        })
 
+    var maincontactSection = document.querySelector(".main")
+    var aside = document.querySelector(".side")
+    
+    if (window.innerWidth<1024) {
+    
        
-
-        //destinationContact.innerHTML = aside.innerHTML
+        maincontactSection.innerHTML = aside.innerHTML
+    
     }
+    else{
+        maincontactSection.innerHTML =""
+    }
+   
+
+    
 
 }
+//window resize contact section changes
 window.addEventListener('resize',moveasideContact)
 
+//scroll
 document.addEventListener("scroll", handlescroll)
 document.addEventListener('DOMContentLoaded',function(){
 
@@ -182,42 +186,11 @@ document.addEventListener('DOMContentLoaded',function(){
        
     
     });
-    // var cont =document.querySelector("a[href='#contact']").className.split(' ');
+  
    
-    if (window.innerWidth <= 1024) {
-        moveasideContact()
-    //     //for smaller screen, show contact button
-    //     if (cont.indexOf("d-none")!= -1 && cont.indexOf("d-inline")==-1){
-    //         document.querySelector("a[href='#contact']").classList.remove("d-none")
-    //         document.querySelector("a[href='#contact']").classList.add("d-inline-block")
-    //         // document.querySelector("a[href='#contact']").classList.toggle("d-inline")    
-    //     }
-
-    //     // take contact section
-
-    //     let aside = document.getElementsByTagName("aside")
-        
-    //     console.log(aside)
-        
-
-        
-
-
+    if (window.innerWidth < 1024) {
+       moveasideContact()
     }
-    // else{
-    //     if (cont.indexOf("d-inline-block")==-1){
-    //         // document.querySelector("a[href='#contact']").classList.remove("d-none")
-    //         document.querySelector("a[href='#contact']").classList.add("d-none")
-    //         // document.querySelector("a[href='#contact']").classList.toggle("d-none")    
-    //     }
-        
-
-        
-    // }
-    
-    
-    
-
 
 })  
 

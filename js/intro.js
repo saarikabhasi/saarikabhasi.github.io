@@ -45,81 +45,11 @@ async function updateintroDesignation(){
     })
 }
 
-async function updatebarSection(){
-
-    var ulSkillset= document.querySelector(".skills-set")
-    var totalSkills = Object.keys(skillsPercentage).length
-
-    for (let l =0;l<totalSkills;l++){
-        let liSk  = document.createElement("li")
-        liSk .classList.add("sk")
-        // liSk.style.animationDelay = "1.2s"
-        // liSk.style.animationDuration="4s"
-        
-        let divskName = document.createElement("div")
-        divskName.innerHTML = Object.keys(skillsPercentage)[l]
-
-        let divBar = document.createElement("div")
-        divBar.classList.add("h-25")
-        divBar.setAttribute("id","bar")
-        
-        
-        let skWidth = skillsPercentage[Object.keys(skillsPercentage)[l]][0]*10 +"%"
-        
-        divBar.style.width= skWidth
-        divBar.style.backgroundColor =skillsPercentage[Object.keys(skillsPercentage)[l]][1]
-
-
-        let expSk = document.createElement("div")
-        expSk.setAttribute("id","exp")
-        expSk.classList.add("rect")
-
-        let p = document.createElement("p")
-        p.classList.add("lead")
-        p.innerHTML = skillsPercentage[Object.keys(skillsPercentage)[l]][0] + "year(s)"
-
-        expSk.appendChild(p)
-
-        liSk.appendChild(divskName)
-        liSk.appendChild(divBar)    
-        liSk.appendChild(expSk)
-
-        ulSkillset.appendChild(liSk )
-        
-      
-        // divBar.animate([
-        //     {width:0},
-        //     {width:skWidth}
-        // ],{
-        //     delay:1000,
-        //     duration:3000,
-        //     easing:'ease-in-out',
-        //     iterations:1,
-        //     direction:'alternate',
-
-        // }
-
-        // );
-       
-    }   
-
-
- 
-
-
-   
-
-    // skSection.appendChild(bar)
-
-    
-
-
-}
 
 document.addEventListener('DOMContentLoaded',function(){
     updateintroName()
     updateintroDesignation()
  
-    updatebarSection()
+    
     
 })
