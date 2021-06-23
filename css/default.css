@@ -305,7 +305,7 @@ section#contact-main h6{
 
 }
 section#contact-main .email-link {
-    color: green;
+    color: rgb(94, 165, 94);
     background-color: transparent;
     border: 1px solid green;
     border-radius: 2%;
@@ -317,6 +317,10 @@ section#contact-main .email-link {
     cursor: pointer;
     transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
     margin-top: 50px;
+}
+section#contact-main .email-link:hover{
+    background-color: rgb(94, 165, 94);;
+    color: white;
 }
 div.social{
 
@@ -528,7 +532,7 @@ ul.skills-set li #exp p.lead {
     color:#46b5d1;
     
 }
-.contact-row{
+.contact-row,.contact-col{
     width: 94%;
     max-width: 1140px; 
     text-align: center;
@@ -537,6 +541,7 @@ ul.skills-set li #exp p.lead {
     margin-left: 0.5rem;
     margin-right: auto;
 }
+
 .contact-row::after{
     content:"";
     display: block;
