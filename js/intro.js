@@ -1,15 +1,3 @@
-const skillsPercentage = {
-    "Python":[6,"#A16E83"],
-    "C/C++" : [6,"#479761"],
-    "Shell":[4,"#3AAFA9"],
-    "Javascript":[1,"#88DBBC"],
-    "HTML/CSS":[2, "#E7717D"],
-    "MySQL":[6,"#D79922"],
-
-
-}
-
-
 async function updateintroName(){
     let heading =document.querySelectorAll('.name')
     let offset = 0.1
