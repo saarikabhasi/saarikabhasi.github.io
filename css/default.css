@@ -90,7 +90,18 @@ nav#nav-wrap{
     top: 0;
     text-transform: capitalize;
 }
-    
+
+
+ul li a.resume {
+    border: 1px solid black;
+    border-radius: 2%;
+    margin-left: 350px;
+    color: #010e3b;
+    text-decoration: none ;
+    height: 100%;
+    letter-spacing: 2.5px;
+}
+
 
 ul li{
 
@@ -100,7 +111,7 @@ ul li{
     display: inline-block;
 }
 
-ul li a.tab,ul li a.tab-1{
+ul li a.tab{
     transition: color 1s ease-in-out;
     padding:10px;
     line-height: 32px;
@@ -323,14 +334,16 @@ section#contact-main{
     letter-spacing: 2.5px;
     font: 25px 'opensans-bold', sans-serif;
 }
-
+#contact-main h5{
+    font-weight: 700;
+}
 section#contact-main .email-link {
     color: rgb(94, 165, 94);
     background-color: transparent;
     border: 1px solid green;
     border-radius: 2%;
     padding: 1.25rem 1.75rem;
-    font-size: 1.5;
+    font-size: 1.2rem;
     font-family: monospace;
     line-height: 1;
     text-decoration: none;
@@ -385,7 +398,7 @@ div .scroll-down{
     
 }
 
-#about-me-info h1, #about-me-info p{
+#about-me-info h1, #about-me-info p,.contact-intro p{
     color: #080808;
     text-align: left;
     opacity: 0.7;
@@ -411,11 +424,11 @@ div .scroll-down{
     /* padding-bottom: 15rem; */
 
 }
-#portfolio,#resume{
+#portfolio{
     width: 94%;
     text-align:center;
 }
-#skills{
+#skills,#contact-main{
     opacity: 0;
    
 }
@@ -512,9 +525,10 @@ ul.skills-set li #exp p.lead {
     margin-bottom: 3.6rem;
     position: relative;
     color:#272727;
-    opacity: 0.5;
+
     
 }
+
 .contact-row,.contact-col{
     width: 94%;
     max-width: 1140px; 
@@ -699,6 +713,14 @@ embed{
     padding: 0;
     text-align: justify;
  }
+ ul li a.resume {
+     /* left:80%; */
+     margin-left: 0px;
+     
+ }
+ nav#nav-wrap ul{
+    justify-content: center !important;
+}
  header#home,#about,#portfolio,#resume{
      width: 100%;
  }
@@ -715,7 +737,7 @@ embed{
     font-size: 1.3rem;
    
  }
- #about-me-info p{
+ #about-me-info p,.contact-intro p{
     font-family: "lora-regular", serif;
     font-size: 1.4rem;
     line-height: 1.7rem;
@@ -768,6 +790,9 @@ div.intro .words{
         font-size: 1rem;
     }
 
+    nav#nav-wrap ul{
+        justify-content: center !important;
+    }
     header#home,#about,#portfolio,#resume{
         width: 100%;
     }
@@ -832,12 +857,16 @@ div.intro .words{
     ul.skills-set li #exp p.lead{
         font-size: 0.7rem;
     }
+
 }
 
 
 @media only screen and (max-width: 1024px){
     .project-title a{
         font-size: 1rem;
+    }
+    nav#nav-wrap ul{
+        justify-content: center !important;
     }
     /* header#home,#about,#portfolio,#resume{
         width: 100%;

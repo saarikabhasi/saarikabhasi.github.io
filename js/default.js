@@ -77,7 +77,7 @@ async function animateskillsBar(){
 function handlescroll(){
     scrollTotal = document.documentElement.clientHeight+document.documentElement.scrollHeight
     scrollPosition= document.documentElement.scrollTop/scrollTotal
-
+    console.log(scrollPosition)
     if (scrollPosition >= 0.01){
 
         document.querySelector("#nav-wrap").classList.add('opaque')
@@ -129,7 +129,7 @@ function handlescroll(){
 
 
     }
-    if (scrollPosition >0.35  && scrollPosition <0.55 ){
+    if (scrollPosition >0.34  && scrollPosition <0.68 ){
         
         // set 'Portfolio' section as current
         change_status_of_btn("portfolio")
@@ -153,15 +153,16 @@ function handlescroll(){
         
     }
 
-    if (scrollPosition >0.55){
+    if (scrollPosition >0.68){
         // set 'contact' section as current
 
-        change_status_of_btn("resume")
-        // window.location.hash = "#resume"
-        let res=document.querySelector("#resume")
-        res.classList.add("fadeIn","animated")
-        res.style.animationDelay = "0.25s"
-        res.style.animationDuration="4s"
+        change_status_of_btn("contact-main")
+    
+        let res=document.querySelector("#contact-main")
+        res.classList.add("fadeUp")
+        res.style.opacity=1
+        res.style.animationDelay = "0.1s"
+        res.style.animationDuration="0.5s"
 
 
      
