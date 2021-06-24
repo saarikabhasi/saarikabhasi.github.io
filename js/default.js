@@ -1,5 +1,40 @@
+const contact = {
+    "github":["fa-github","https://github.com/saarikabhasi"],
+    "linkedin": ["fa-linkedin","https://www.linkedin.com/in/nair-saarika-bhasi"],
+    "email":["fa-envelope","mailto:saarikabhasi@yahoo.com"]
+}
 
+async function createfooterContact(){
+    let div = document.createElement("div")
+    // div.setAttribute("id","contact")
+    div.classList.add("footer-contact","d-none")
+    
 
+    let ul=document.createElement("ul")
+    
+    for (c=0;c<Object.keys(contact).length;c++){
+        let li = document.createElement("li")
+        
+        let a = document.createElement("a")
+        a.classList.add("icon")
+        a.setAttribute("href",contact[Object.keys(contact)[c]][1])
+       
+        let i = document.createElement("i")
+        i.classList.add("fa",contact[Object.keys(contact)[c]][0])
+
+        a.appendChild(i)
+        li.appendChild(a)
+        ul.appendChild(li)
+        console.log(ul)
+    }
+
+    div.appendChild(ul)
+    
+    var footer = document.getElementById("footer-main")
+    footer.insertBefore(div,footer.childNodes[0])
+    // footer.prepend(div)
+    
+}
 
 async function change_active(){
     var current = document.getElementsByClassName("current"); 
@@ -144,17 +179,24 @@ function handlescroll(){
 
 function moveasideContact(){
 
-    var maincontactSection = document.querySelector(".main")
+    // var maincontactSection = document.querySelector(".main")
     var aside = document.querySelector(".side")
-    
-    if (window.innerWidth<1024) {
-    
+    var footerContact = document.querySelector(".footer-contact")
+    if (window.innerWidth<1000) {
+        
        
-        maincontactSection.innerHTML = aside.innerHTML
-    
+        //maincontactSection.innerHTML = aside.innerHTML
+        // createfooterContact()
+        footerContact.classList.remove("d-none")
+        aside.style.opacity ="0"
     }
     else{
-        maincontactSection.innerHTML =""
+        // maincontactSection.innerHTML =""
+        aside.style.opacity ="1"
+        if (footerContact.className.split(' ').indexOf("d-none")==-1){
+            footerContact.classList.add("d-none")
+        }
+        
     }
    
 
@@ -187,8 +229,8 @@ document.addEventListener('DOMContentLoaded',function(){
     
     });
   
-   
-    if (window.innerWidth < 1024) {
+    createfooterContact();
+    if (window.innerWidth < 1000) {
        moveasideContact()
     }
 

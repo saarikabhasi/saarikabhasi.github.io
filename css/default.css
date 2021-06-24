@@ -17,6 +17,36 @@ aside{
     z-index: 1;
     
 }
+#footer-main{
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+    min-height: 70px;
+    padding: 15px;
+    text-align: center;
+}
+#footer-main .footer-contact{
+    display: block;
+    width: 100%;
+    max-width: 270px;
+    margin: 0px auto 10px;
+    color: #8892b0;
+}
+
+#footer-main .footer-contact ul{
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+}
 header#home{
 position: relative;
 /* height: 800px; */
@@ -310,7 +340,12 @@ section#contact-main .email-link:hover{
     color: rgb(238, 192, 43) ;;
 }
 
+.bi{
 
+
+color:rgb(238, 192, 43) ;
+
+}
 .fa-angle-double-down:hover{
     color:#006a91 ;
 }
@@ -496,7 +531,7 @@ ul.skills-set li #exp p.lead {
     background-color: rgb(236, 147, 74);
 
 }
-.contact-row::before{
+/* .contact-row::before{
     content:"";
     display: block;
     width:1px;
@@ -504,11 +539,25 @@ ul.skills-set li #exp p.lead {
     margin: 0px auto;
     background-color: rgb(236, 147, 74);
 
+} */
+.contact-info .icon a{
+    padding: 10px;
+}
+.contact-info .icon svg{
+    width:20px;
+    height:20px;
+    
+}
+.contact-info .icon svg:hover{
+    color: rgb(238, 192, 43) ;
+}
+svg .feather{
+    fill:none;
 }
 .contact-info .icon i {
 
     
-    font-size: 2rem;
+    font-size: 1.4rem;
     color: rgb(238, 192, 43) ;
 }
 
@@ -658,7 +707,7 @@ embed{
      margin: 40% auto 0 ;
  }
  aside{
-    opacity: 0;
+    /* opacity: 0; */
      /* margin-left: auto; */
      /* display: hide; */
  }
@@ -726,7 +775,7 @@ div.intro .words{
         left:0%;
     }
     aside{
-        opacity: 0;
+        /* opacity: 0; */
         /* margin-left: 85%; */
         /* display: hide; */
     }
@@ -794,7 +843,7 @@ div.intro .words{
         width: 100%;
     } */
     aside{
-        opacity: 0;
+        /* opacity: 0; */
         /* margin-left: 75%; */
         /* display: hide; */
     }

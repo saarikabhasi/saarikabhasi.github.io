@@ -1,4 +1,4 @@
-async function updateintroName(){
+async function animateintroName(){
     let heading =document.querySelectorAll('.name')
     let offset = 0.1
     let start = 1.4
@@ -12,7 +12,7 @@ async function updateintroName(){
         span.style.animationDelay =time
     })
 }
-async function updateintroDesignation(){
+async function animateintroDesignation(){
     let designation =document.querySelectorAll('.designation')
     
     let startD1 = 4
@@ -35,8 +35,8 @@ async function updateintroDesignation(){
 
 
 document.addEventListener('DOMContentLoaded',function(){
-    updateintroName()
-    updateintroDesignation()
+    animateintroName()
+    animateintroDesignation()
  
     
     
