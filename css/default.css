@@ -35,6 +35,7 @@ aside{
     max-width: 270px;
     margin: 0px auto 10px;
     color: #8892b0;
+ 
 }
 
 #footer-main .footer-contact ul{
@@ -46,6 +47,12 @@ aside{
     padding: 0px;
     margin: 0px;
     list-style: none;
+}
+
+#footer-main .credits{
+    line-height:1;
+    font-size:1rem;
+    color: #a8b2d1;
 }
 header#home{
 position: relative;
@@ -306,7 +313,7 @@ div.scroll-down{
   }
 
 section#contact-main{
-    z-index: 1;
+    z-index: 0;
     /* color: #fff; */
     font-size: 40px;
     position: relative;
@@ -340,12 +347,7 @@ section#contact-main .email-link:hover{
     color: rgb(238, 192, 43) ;;
 }
 
-.bi{
 
-
-color:rgb(238, 192, 43) ;
-
-}
 .fa-angle-double-down:hover{
     color:#006a91 ;
 }
@@ -499,7 +501,7 @@ ul.skills-set li #exp p.lead {
 }
 #contact {
     margin-left: 0.8rem;
-    padding-top: 3rem;
+    padding-top: 10rem;
     padding-bottom: 7.2rem;
 }
 .contact-intro {
@@ -509,7 +511,8 @@ ul.skills-set li #exp p.lead {
     text-align: center;
     margin-bottom: 3.6rem;
     position: relative;
-    color:#46b5d1;
+    color:#272727;
+    opacity: 0.5;
     
 }
 .contact-row,.contact-col{
@@ -526,7 +529,7 @@ ul.skills-set li #exp p.lead {
     content:"";
     display: block;
     width:1px;
-    height:90px;
+    height:50rem;
     margin: 0px auto;
     background-color: rgb(236, 147, 74);
 
@@ -540,26 +543,23 @@ ul.skills-set li #exp p.lead {
     background-color: rgb(236, 147, 74);
 
 } */
-.contact-info .icon a{
+.contact-info .icon a, .footer-contact  a{
     padding: 10px;
 }
-.contact-info .icon svg{
-    width:20px;
-    height:20px;
+.contact-info .icon svg,.footer-contact .icon svg {
+    width:1.7rem;
+    height:2rem;
     
 }
-.contact-info .icon svg:hover{
-    color: rgb(238, 192, 43) ;
+.contact-info svg g:hover,.footer-contact svg g:hover {
+    fill:rgb(238, 192, 43) ;
+    stroke: transparent;
 }
-svg .feather{
-    fill:none;
+.contact-info svg path:hover, .footer-contact svg path:hover{
+    fill:rgb(238, 192, 43) ;
+    stroke: transparent;  
 }
-.contact-info .icon i {
 
-    
-    font-size: 1.4rem;
-    color: rgb(238, 192, 43) ;
-}
 
 #portfolio{
     opacity: 0;
@@ -680,12 +680,12 @@ svg .feather{
     /* padding-bottom: 50px; */
     padding-bottom: 30px;
 }
-.contact-info .icon{
+/* .contact-info .icon{
     margin: 15rem auto;
-}
-.contact-info .icon i:hover{
+} */
+/* .contact-info .icon i:hover{
     color:#006a91;
-} 
+}  */
 .row:before, .row:after {
     content: "";
     display: table;

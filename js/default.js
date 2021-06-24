@@ -1,38 +1,33 @@
-const contact = {
-    "github":["fa-github","https://github.com/saarikabhasi"],
-    "linkedin": ["fa-linkedin","https://www.linkedin.com/in/nair-saarika-bhasi"],
-    "email":["fa-envelope","mailto:saarikabhasi@yahoo.com"]
-}
 
 async function createfooterContact(){
     let div = document.createElement("div")
     // div.setAttribute("id","contact")
     div.classList.add("footer-contact","d-none")
     
-
+    let side  = document.querySelectorAll(".contact-icon")
+    console.log(side)
     let ul=document.createElement("ul")
-    
-    for (c=0;c<Object.keys(contact).length;c++){
+    side.forEach(icon=>{
         let li = document.createElement("li")
-        
+
         let a = document.createElement("a")
         a.classList.add("icon")
-        a.setAttribute("href",contact[Object.keys(contact)[c]][1])
-       
-        let i = document.createElement("i")
-        i.classList.add("fa",contact[Object.keys(contact)[c]][0])
+        a.setAttribute("href",icon.href)
 
-        a.appendChild(i)
+        a.innerHTML = icon.innerHTML
+
         li.appendChild(a)
         ul.appendChild(li)
         console.log(ul)
-    }
+    })
+  
+    
 
     div.appendChild(ul)
     
     var footer = document.getElementById("footer-main")
     footer.insertBefore(div,footer.childNodes[0])
-    // footer.prepend(div)
+
     
 }
 
