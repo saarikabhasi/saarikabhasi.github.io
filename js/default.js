@@ -1,5 +1,35 @@
 
+async function createfooterContact(){
+    let div = document.createElement("div")
+    // div.setAttribute("id","contact")
+    div.classList.add("footer-contact","d-none")
+    
+    let side  = document.querySelectorAll(".contact-icon")
+    console.log(side)
+    let ul=document.createElement("ul")
+    side.forEach(icon=>{
+        let li = document.createElement("li")
 
+        let a = document.createElement("a")
+        a.classList.add("icon")
+        a.setAttribute("href",icon.href)
+
+        a.innerHTML = icon.innerHTML
+
+        li.appendChild(a)
+        ul.appendChild(li)
+        console.log(ul)
+    })
+  
+    
+
+    div.appendChild(ul)
+    
+    var footer = document.getElementById("footer-main")
+    footer.insertBefore(div,footer.childNodes[0])
+
+    
+}
 
 async function change_active(){
     var current = document.getElementsByClassName("current"); 
@@ -144,17 +174,24 @@ function handlescroll(){
 
 function moveasideContact(){
 
-    var maincontactSection = document.querySelector(".main")
+    // var maincontactSection = document.querySelector(".main")
     var aside = document.querySelector(".side")
-    
-    if (window.innerWidth<1024) {
-    
+    var footerContact = document.querySelector(".footer-contact")
+    if (window.innerWidth<1000) {
+        
        
-        maincontactSection.innerHTML = aside.innerHTML
-    
+        //maincontactSection.innerHTML = aside.innerHTML
+        // createfooterContact()
+        footerContact.classList.remove("d-none")
+        aside.style.opacity ="0"
     }
     else{
-        maincontactSection.innerHTML =""
+        // maincontactSection.innerHTML =""
+        aside.style.opacity ="1"
+        if (footerContact.className.split(' ').indexOf("d-none")==-1){
+            footerContact.classList.add("d-none")
+        }
+        
     }
    
 
@@ -187,8 +224,8 @@ document.addEventListener('DOMContentLoaded',function(){
     
     });
   
-   
-    if (window.innerWidth < 1024) {
+    createfooterContact();
+    if (window.innerWidth < 1000) {
        moveasideContact()
     }
 

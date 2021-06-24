@@ -1,3 +1,8 @@
+
+
+
+
+
 const skillsPercentage = {
     "Python":[6,"#A16E83"],
     "C/C++" : [6,"#479761"],
@@ -10,7 +15,8 @@ const skillsPercentage = {
 }
 
 
-async function updatebarSection(){
+
+async function animatebarSection(){
 
     var ulSkillset= document.querySelector(".skills-set")
     var totalSkills = Object.keys(skillsPercentage).length
@@ -65,6 +71,9 @@ async function updatebarSection(){
 
 
 }
+
+
 document.addEventListener('DOMContentLoaded',function(){
-    updatebarSection()
+    animatebarSection()
+    
 })
