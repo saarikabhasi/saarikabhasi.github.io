@@ -246,6 +246,20 @@ function animationDown(element){
     element.style.animationDuration=null
 }
 
+function highlight(element){
+    console.log("highlight")
+    // element.style.backgroundColor="rgb(238, 192, 43) ;"
+    
+    element.style.stroke = "transparent"
+    element.style.fill = "rgb(238, 192, 43) "
+}
+function dim(element){
+    console.log("dim")
+    element.style.fill ="none"
+    element.style.stroke = "rgba(255, 145, 0, 0.411) "
+}
+
+
 
 
 
