@@ -111,6 +111,7 @@ ul li a.resume {
 ul li a.resume:hover{
     /* background-color: rgba(100,255,218,0.1);; */
     background-color: #006a9128;;
+    font-weight: 0;
 }
 ul li{
 
@@ -130,15 +131,16 @@ ul li a.tab{
     background: transparent;
 }
 
-ul#navbar li a.current,ul#navbar li a:hover {
-/* color: #FC4445; */
+ul#navbar li a.current{
 color:rgb(255, 145, 0) ;
-
 font-weight: 600;
-/* text-transform: uppercase; */
-
 
 }
+ul#navbar li a.tab:hover {
+    color:rgb(255, 145, 0) ;;
+    font-weight:0 !important;
+}
+
 
 div#home,div.scroll-down{
     z-index: 100;
