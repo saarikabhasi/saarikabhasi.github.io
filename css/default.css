@@ -570,7 +570,9 @@ ul.skills-set li #exp p.lead {
 .contact-info .icon a, .footer-contact  a{
     padding: 10px;
 }
-.contact-info .icon svg,.footer-contact .icon svg {
+
+
+.contact-info .icon svg,.footer-contact .icon svg{
     width:1.7rem;
     height:2rem;
     transition: fill 1s ease;
@@ -690,6 +692,7 @@ ul.skills-set li #exp p.lead {
 .folder a{
     padding:0.5rem
 }
+
 .project-tech-list li{
     margin-right: 15px;
     color: #bededb;
