@@ -46,7 +46,7 @@ const skillsPercentage = {
 
 
 }
-
+//creating project 
 async function createeachProject(){
     var parentDiv = document.querySelector("#projects")
     let project_length = projects["title"].length
@@ -148,8 +148,8 @@ async function createeachProject(){
 }
 
 
-
-async function animatebarSection(){
+//skills bar creation
+async function createskillsBar(){
 
     var ulSkillset= document.querySelector(".skills-set")
     var totalSkills = Object.keys(skillsPercentage).length
@@ -192,22 +192,11 @@ async function animatebarSection(){
        
     }   
 
-
- 
-
-
-   
-
-
-
-    
-
-
 }
 
 
 document.addEventListener('DOMContentLoaded',function(){
-    animatebarSection()
+    createskillsBar()
     createeachProject()
     
 })

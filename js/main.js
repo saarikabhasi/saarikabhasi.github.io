@@ -33,10 +33,25 @@ async function animateintroDesignation(){
     })
 }
 
+async function animatebounce(){
+   
+    
+    window.setTimeout(function() {
+        let scrollDown =  document.querySelector('.angled')
+        scrollDown.classList.remove("invisible")
+
+        let bounce =document.querySelector('.fa-angle-double-down')
+        bounce.classList.add("bounce")
+        
+
+      }, 3500);
+
+
+}
 
 document.addEventListener('DOMContentLoaded',function(){
-    animateintroName()
-    animateintroDesignation()
+    animateintroName().then(animateintroDesignation().then(animatebounce()))
+    
  
     
     
