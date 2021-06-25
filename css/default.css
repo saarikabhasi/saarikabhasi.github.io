@@ -133,6 +133,7 @@ ul li a.tab{
 ul#navbar li a.current,ul#navbar li a:hover {
 /* color: #FC4445; */
 color:rgb(255, 145, 0) ;
+
 font-weight: 600;
 /* text-transform: uppercase; */
 
@@ -617,7 +618,7 @@ ul.skills-set li #exp p.lead {
 
 
 .project-inner:hover{
-  background-color: #006a91;
+  background-color: #00465f;
 
 
 }
