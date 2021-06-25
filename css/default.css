@@ -485,21 +485,12 @@ ul.skills-set #bar{
     border-radius: 0%;
 
 }
-ul.skills-set .bar-hover{
-    animation-name: moveside;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
 
-
-}
 
 ul.skills-set li{
     position: relative;
     margin-bottom: 10px;
     padding-left: 20px;
-    /* display: grid;
-    grid-template-columns: repeat(2 , minmax(140px, 200px)); */
     font-size: 20px;
 }
 li.sk {
@@ -508,7 +499,7 @@ li.sk {
 }
 
 ul.skills-set li .rect{
-    /* border: 1px solid black ; */
+
     border-radius: 25%;
     height: 100%;
     width: 100%;
@@ -564,15 +555,7 @@ ul.skills-set li #exp p.lead {
     background-color: rgb(236, 147, 74);
 
 }
-/* .contact-row::before{
-    content:"";
-    display: block;
-    width:1px;
-    height:90px;
-    margin: 0px auto;
-    background-color: rgb(236, 147, 74);
 
-} */
 .contact-info .icon a, .footer-contact  a{
     padding: 10px;
 }
