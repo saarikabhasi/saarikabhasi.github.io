@@ -32,6 +32,7 @@ async function animateintroDesignation(){
         span.style.animationDelay =time2
     })
 }
+
 async function animatebounce(){
    
     
