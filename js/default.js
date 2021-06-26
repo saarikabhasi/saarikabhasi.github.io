@@ -118,7 +118,7 @@ function handlescroll(){
 
 
     }
-    if (scrollPosition >0.2 && scrollPosition <0.35 ){
+    if (scrollPosition >0.2 && scrollPosition <0.29 ){
         console.log("skills")
         let  sk = document.querySelector("#skills")
             sk.classList.add("fadeUp")
@@ -129,7 +129,7 @@ function handlescroll(){
 
 
     }
-    if (scrollPosition >0.34  && scrollPosition <0.68 ){
+    if (scrollPosition >0.29  && scrollPosition <0.68 ){
         
         // set 'Portfolio' section as current
         change_status_of_btn("portfolio")
@@ -137,7 +137,7 @@ function handlescroll(){
         let portf = document.querySelector("#portfolio")
         portf.classList.add("fadeUp","animated")
         portf.style.opacity = 1
-        portf.style.animationDelay = "0.5s"
+        portf.style.animationDelay = "0.3s"
         portf.style.animationDuration="0.5s"
 
         var eachProject = document.querySelector("#projects").querySelectorAll(".col-lg-4")
