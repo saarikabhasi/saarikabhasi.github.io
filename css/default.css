@@ -356,6 +356,7 @@ section#contact-main{
     font-size: 40px;
     position: relative;
     left: 0;
+    width: 95%;
     top: 40%;
     margin: 0 auto;
     letter-spacing: 2.5px;
@@ -453,6 +454,7 @@ section#contact-main .email-link:hover{
     width: 94%;
     text-align:center;
 }
+
 #skills,#contact-main{
     opacity: 0;
 
