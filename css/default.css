@@ -56,28 +56,30 @@ aside{
 }
 header#home{
 position: relative;
-/* height: 800px; */
+height: 100% !important;
 min-height: 500px;
 width: 95%;
-/* background: #F4F4F4 no-repeat top center; */
 background-size: cover !important;
 -webkit-background-size: cover !important;
-/* text-align: center; */
 overflow: hidden;
+
 }
 div.intro .words{
+    max-height: 200px;
     padding: 3rem;
-    font-size: 6vw;
-    /* font-size: clamp(40px, 8vw, 80px); */
+    /* font-size: 6vw; */
+    font-size: clamp(4px, 6vw, 80px);
     color:#006a91;
     opacity: 1;
+
 }
 
 div.intro .words span{
     font-weight: 900;
 }
 span.designation{
-    font-size: 1.5vh;
+    font-size: 2vh;
+    max-height: 200px;
 }
 nav#nav-wrap{
     font: 1.1rem 'opensans-bold', sans-serif;
@@ -94,15 +96,12 @@ nav#nav-wrap{
 
 
 ul li a.resume {
-    border: 1px solid black;
     border-radius: 16px;
-    margin-left: 350px;
     margin-right: 35px;
     color: #010e3b;
-    text-decoration: none ;
+    text-decoration:none;
     height: 100%;
     padding:10px;
-
     display: inline-block;
     line-height: 32px;
     letter-spacing: 2.5px;
@@ -110,7 +109,7 @@ ul li a.resume {
 }
 
 ul li a.resume:hover{
-    /* background-color: rgba(100,255,218,0.1);; */
+
     background-color: #006a9128;;
     font-weight: 0;
 }
@@ -143,24 +142,31 @@ ul#navbar li a.tab:hover {
 }
 
 
-div#home,div.scroll-down{
+div#home{
     z-index: 100;
-    font-size: 40px;
     position: relative;
     left:0%;
-    top: 20%;
-    margin: 7% auto 0 ;
+    /* top: 20%; */
+    margin: 0% auto 0 ;
     letter-spacing: 2.5px;
-    font: 25px 'opensans-bold', sans-serif;
-    /* text-align: right; */
     text-align: center;
     font-weight: 1000;
     width: 80%;
+  
+
     
 }
 div.scroll-down{
-    top: 30%;
+    /* top: 30%; */
+    margin: 13% auto auto;
+    position: relative;
+    bottom: 0px;
     /* left: -50%; */
+    max-height: 200px;
+
+}
+div .scroll-down{
+    /* margin-top:400px; */
 
 }
 .animated {
@@ -325,17 +331,21 @@ div.scroll-down{
     animation-name: fadeSlow;
     animation-timing-function: easeout;
 }
+div#home h1{
+    max-height: 200px;
+    max-width: 100px;
+    font-size: clamp(14px,5vw,16px);
+}
 .typing {
     border-right: .15em solid orange;
     font-family: "Courier";
     /* font-size: 1.5vh; */
-    font-size: clamp(14px,5vw,16px);
     white-space: nowrap;
     overflow: hidden;
-    width: clamp(35%,5vw,60%);
+    width:100%;
     margin: 15% auto 0;
     -webkit-animation: type 2s steps(40, end);
-    animation: type 1.5s steps(10, end),blink .5s step-end infinite alternate;
+    animation: type 5s steps(40, end),blink .5s step-end infinite alternate;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
   }
@@ -382,10 +392,7 @@ section#contact-main .email-link:hover{
     color:#006a91 ;
 }
 
-div .scroll-down{
-    margin-top:400px;
 
-}
 .fa-angle-double-down{
     font-size: 40px;
 
@@ -711,20 +718,13 @@ embed{
     padding: 0;
     text-align: justify;
  }
- ul li a.resume {
-  
-     margin-left: 0px;
 
- }
- nav#nav-wrap ul{
-    justify-content: center !important;
-}
  header#home,#about,#portfolio,#resume{
      width: 100%;
  }
  div#home,div.scroll-down{
      left:0%;
-     margin: 40% auto 0 ;
+     margin: 50% auto 0 ;
  }
 
  #about h5{
@@ -769,11 +769,16 @@ ul.skills-set li{
 
 }
 div.intro .words{
+
     padding: 1.5rem;
-    /* font-size: clamp(40px, 8vw, 80px); */
+  
     font-weight: 800;
     line-height: 1.1;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+span.designation{
+    font-size: 1.5vh;
 
 }
 }
@@ -784,38 +789,26 @@ div.intro .words{
         font-size: 1rem;
     }
 
-    nav#nav-wrap ul{
-        justify-content: center !important;
-    }
+
     header#home,#about,#portfolio,#resume{
         width: 100%;
     }
     div#home,div.scroll-down{
         left:0%;
+        margin:60% auto 0;
     }
-    aside{
-        /* opacity: 0; */
-        /* margin-left: 85%; */
-        /* display: hide; */
-    }
+
     div.intro .words{
         padding: 2rem;
-        /* font-size: 1.5rem; */
 
 
     }
 
     .typing{
         border-right: .1em solid orange;
-        /* width: 60%; */
         margin: 15% auto 0 !important;
     }
-    div.scroll-down{
-        top: 50%;
-        margin: 40% auto 0;
-        /* left: -50%; */
 
-    }
     #nav-skills{
         font-size: 10px;
 
@@ -842,6 +835,10 @@ div.intro .words{
     ul.skills-set li #exp p.lead{
         font-size: 0.7rem;
     }
+    span.designation{
+        font-size: 1.5vh;
+    
+    }
 
 }
 
@@ -850,23 +847,15 @@ div.intro .words{
     .project-title a{
         font-size: 1rem;
     }
-    nav#nav-wrap ul{
-        justify-content: center !important;
-    }
 
+    
 
     div#home,div.scroll-down{
         left:0%;
     }
-    div.scroll-down{
-        top: 65%;
-        margin: 69% auto 0 ;
-        margin-bottom: 2rem;
-       
 
-    }
     .typing{
-        /* width: clamp(15%,5vw,40%); */
+       
         margin: 25% auto 0;
     }
 
