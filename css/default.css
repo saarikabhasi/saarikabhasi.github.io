@@ -96,15 +96,12 @@ nav#nav-wrap{
 
 
 ul li a.resume {
-    border: 1px solid black;
     border-radius: 16px;
-    margin-left: 350px;
     margin-right: 35px;
     color: #010e3b;
-    text-decoration: none ;
+    text-decoration:none;
     height: 100%;
     padding:10px;
-
     display: inline-block;
     line-height: 32px;
     letter-spacing: 2.5px;
@@ -721,14 +718,7 @@ embed{
     padding: 0;
     text-align: justify;
  }
- ul li a.resume {
-  
-     margin-left: 0px;
 
- }
- nav#nav-wrap ul{
-    justify-content: center !important;
-}
  header#home,#about,#portfolio,#resume{
      width: 100%;
  }
@@ -799,9 +789,7 @@ span.designation{
         font-size: 1rem;
     }
 
-    nav#nav-wrap ul{
-        justify-content: center !important;
-    }
+
     header#home,#about,#portfolio,#resume{
         width: 100%;
     }
@@ -858,9 +846,6 @@ span.designation{
 @media only screen and (max-width: 1024px){
     .project-title a{
         font-size: 1rem;
-    }
-    nav#nav-wrap ul{
-        justify-content: center !important;
     }
 
     
