@@ -129,7 +129,7 @@ function handlescroll(){
 
 
     }
-    if (scrollPosition >0.29  && scrollPosition <0.68 ){
+    if (scrollPosition >0.29  && scrollPosition <0.62 ){
         
         // set 'Portfolio' section as current
         change_status_of_btn("portfolio")
@@ -153,7 +153,7 @@ function handlescroll(){
         
     }
 
-    if (scrollPosition >0.68){
+    if (scrollPosition >0.62){
         // set 'contact' section as current
 
         change_status_of_btn("contact-main")
