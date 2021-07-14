@@ -57,7 +57,7 @@ aside{
 header#home{
 position: relative;
 height: 100% !important;
-min-height: 500px;
+min-height: 670px;
 width: 95%;
 background-size: cover !important;
 -webkit-background-size: cover !important;
@@ -158,9 +158,11 @@ div#home{
 }
 div.scroll-down{
     /* top: 30%; */
-    margin: 13% auto auto;
-    position: relative;
-    bottom: 0px;
+    /* margin: 13% auto auto; */
+    position: absolute;
+    bottom: 50px;
+    text-align: center;
+    width: 100%;
     /* left: -50%; */
     max-height: 200px;
 
