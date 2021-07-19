@@ -745,9 +745,10 @@ embed{
     text-align: justify;
  }
  .about-me-info img{
-    width:150px;
-    float: center;
-    margin-left: 30%;
+    width:100%;
+    /* float: center; */
+    /* margin-left: 30%; */
+    height: 320px;
 }
 
 ul.skills-set{
