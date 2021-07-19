@@ -5,6 +5,7 @@ body{
     line-height: 1.3;
 
 }
+
 aside{
     left:5%;
     margin-left: 87%;
@@ -165,7 +166,7 @@ div.scroll-down{
     width: 100%;
     /* left: -50%; */
     max-height: 200px;
-    scroll-behavior: smooth;
+    /* scroll-behavior: smooth; */
 
 }
 div .scroll-down{
@@ -436,8 +437,9 @@ section#contact-main .email-link:hover{
 }
 
 .about-me-info img{
-    border-radius: 50%;
-    object-position: 200% 100%;
+    border-radius: 10%;
+    object-fit: cover;;
+    opacity: 1;
 }
 
 #portfolio,#contact,#skills,#resume,#contact-main{
