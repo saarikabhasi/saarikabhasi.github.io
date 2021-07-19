@@ -53,7 +53,9 @@ function scroll_down_click(){
     // make 'about' section as current
     change_status_of_btn("about")
     // window.location.hash = "#about"
-    
+    document.querySelector("#about").scrollIntoView({
+        behavior: 'smooth'
+    });
    
     
     
