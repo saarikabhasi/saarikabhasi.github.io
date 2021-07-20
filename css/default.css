@@ -69,14 +69,16 @@ div.intro .words{
     max-height: 200px;
     padding: 3rem;
     /* font-size: 6vw; */
-    font-size: clamp(4px, 6vw, 80px);
+    font-size: clamp(4px, 7vw, 80px);
     color:#006a91;
     opacity: 1;
+    
 
 }
 
 div.intro .words span{
     font-weight: 900;
+    line-height: 2rem;
 }
 span.designation{
     font-size: 2vh;
