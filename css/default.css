@@ -69,7 +69,7 @@ div.intro .words{
     max-height: 200px;
     padding: 3rem;
     /* font-size: 6vw; */
-    font-size: clamp(4px, 7vw, 80px);
+    font-size: clamp(10px, 6.5vw, 10rem);
     color:#006a91;
     opacity: 1;
     
@@ -78,7 +78,7 @@ div.intro .words{
 
 div.intro .words span{
     font-weight: 900;
-    line-height: 2rem;
+    line-height: 3rem;
 }
 span.designation{
     font-size: 2vh;
@@ -805,7 +805,7 @@ span.designation{
     }
     div#home,div.scroll-down{
         left:0%;
-        margin:60% auto 0;
+        /* margin:60% auto 0; */
     }
 
     div.intro .words{
