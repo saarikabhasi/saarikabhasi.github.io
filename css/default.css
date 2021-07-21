@@ -624,7 +624,7 @@ ul.skills-set li #exp p.lead {
 
 
 .project-inner:hover{
-  background-color: #00465f;
+  background-color: #180d27a9;
 
 
 }
@@ -645,7 +645,7 @@ ul.skills-set li #exp p.lead {
     width:100%;
     /* background-color:transparent; */
     transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);;
-    background-color: #010e3b;
+    background-color: #050e2edc;
 
 }
 
